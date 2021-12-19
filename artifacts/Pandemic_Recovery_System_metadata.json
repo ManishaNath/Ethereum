@@ -1,0 +1,436 @@
+{
+	"compiler": {
+		"version": "0.7.0+commit.9e61f92b"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Pname",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "age",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "symptom",
+						"type": "string"
+					}
+				],
+				"name": "PatientDetails",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Rname",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "Symptoms",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "HospitalName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "HospitalLocation",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "DaysForRecovery",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "TestUndergone",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "AmtSpent",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "MedicationsTaken",
+						"type": "string"
+					}
+				],
+				"name": "RecovererDetails",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Pname",
+						"type": "string"
+					},
+					{
+						"internalType": "uint16",
+						"name": "_age",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "_symptom",
+						"type": "string"
+					}
+				],
+				"name": "FillPatientDetails",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_Rname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_Symptom",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_HospitalName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_HospitalLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint16",
+						"name": "_DaysForRecovery",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "_TestUndergone",
+						"type": "string"
+					},
+					{
+						"internalType": "uint16",
+						"name": "_AmtSpent",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "_MedicationsTaken",
+						"type": "string"
+					}
+				],
+				"name": "FillRecovererDetails",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_patientaddress",
+						"type": "address"
+					}
+				],
+				"name": "GetPatientSymptom",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_RecovererAddress",
+						"type": "address"
+					}
+				],
+				"name": "GetRecovererSymptom",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_symptom",
+						"type": "string"
+					}
+				],
+				"name": "HowToRecoverDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "Rname",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "Symptoms",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "HospitalName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "HospitalLocation",
+								"type": "string"
+							},
+							{
+								"internalType": "uint16",
+								"name": "DaysForRecovery",
+								"type": "uint16"
+							},
+							{
+								"internalType": "string",
+								"name": "TestUndergone",
+								"type": "string"
+							},
+							{
+								"internalType": "uint16",
+								"name": "AmtSpent",
+								"type": "uint16"
+							},
+							{
+								"internalType": "string",
+								"name": "MedicationsTaken",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Pandemic_Recovery_System.Recoverer",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_patientaddress",
+						"type": "address"
+					}
+				],
+				"name": "PatientAddressIs",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_RecovererAddress",
+						"type": "address"
+					}
+				],
+				"name": "RecovererAddressIs",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "findTheDetail",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "patients",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Pname",
+						"type": "string"
+					},
+					{
+						"internalType": "uint16",
+						"name": "age",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "symptom",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "recoverers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Rname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "Symptoms",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "HospitalName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "HospitalLocation",
+						"type": "string"
+					},
+					{
+						"internalType": "uint16",
+						"name": "DaysForRecovery",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "TestUndergone",
+						"type": "string"
+					},
+					{
+						"internalType": "uint16",
+						"name": "AmtSpent",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "MedicationsTaken",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"UseCases/PANDEMIC Recovery System/Pandemic.sol": "Pandemic_Recovery_System"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"UseCases/PANDEMIC Recovery System/Pandemic.sol": {
+			"keccak256": "0x9a92043b561b0c0743f71dc986fbca622ea2da9bae8717723aafaddaf8f2517f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1b409ca493dfd6214cc3d9ab713b30d159e9f570822107b03a07b6f99ad5a3a6",
+				"dweb:/ipfs/QmbqaqKLxVffvn9ixyfAB8Sj27gLjVvED7NFJRRB7aJfMi"
+			]
+		}
+	},
+	"version": 1
+}
